@@ -2,47 +2,45 @@
 
 ## Data
 
-The data I propose to visualize for my project is ...
+Multivariate Diabetes Risk Dashboard
 
+This project aims to create an interactive visualization for the Pima Indians Diabetes Dataset, allowing health analysts to rapidly explore and compare multiple risk factors (BMI, Glucose, Age, Pregnancies, etc.) to understand their collective contribution to a diabetes diagnosis. This design is based on Sketch 3: The Multivariate Comparison Dashboard.
+
+Source URL: https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database
 
 ## Questions & Tasks
 
-The following tasks and questions will drive the visualization and interaction decisions for this project:
+A. Core Questions to Answer
 
- * (insert your question or task here) How does the X vary over time?
- * (insert your question or task here) Is there any correlation between X and Y?
- * (insert your question or task here) Are there interesting spatial patterns in X?
- * (insert your question or task here) How many X are there across different Y?
+Prediction Threshold: Where is the precise boundary (in terms of BMI and Glucose) that separates high-risk from low-risk patients?
+Risk Amplification: How does Age or Pregnancies amplify the risk when combined with high BMI and Glucose?
+Factor Comparison: Which attribute (e.g., Glucose vs. BloodPressure) shows the clearest difference between the Diabetic and Non-Diabetic groups?
+
+B. Tasks to Enable (User Goals)
+
+Comparison: Compare the average value of any metric (e.g., Insulin) between the two categorical groups (Diabetic vs. Non-Diabetic).
+Segmentation: Filter or select a specific cohort (e.g., patients with BMI > 35) and view their corresponding distributions across all other factors.
+Lookup: Instantly retrieve all raw biometric data for a single patient (point) by hovering over or clicking on a mark.
 
 ## Sketches
 
-(insert one or more hand-drawn sketches of interactive visualizations that you imagine)
-(describe each sketch - how is the data visualized, what are the interactions, and how do these relate to the questions/tasks)
+[![image](https://pasteboard.co/T8La8pBfwlx0.png)]
+
+This sketch informs the most perceptually accurate visual encoding for the primary risk factors in the final dashboard's Small Multiples panels.
+
+Goal: Refine the plot using VAD principles.
+
+Position (X/Y): BMI and Glucose (High Accuracy).
+
+Shape: Outcome (Circle for Low Risk, Cross for High Risk) (High Accuracy for Categorical).
+
+Color Intensity: Age (Sequential Light → Dark) (Medium Accuracy for Quantitative/Ordered).
 
 
 ## Prototypes
 
-I’ve created a proof of concept visualization of this data. It's a ... and it shows ...
+[![image](https://pasteboard.co/rPKInoSENW0w.png)]
 
-[![image](https://user-images.githubusercontent.com/68416/65240758-9ef6c980-daff-11e9-9ffa-e35fc62683d2.png)](https://vizhub.com/curran/eab039ad1765433cb51aad167d9deae4)
+This working prototype demonstrates the use of a new technique—Arranging Tables by aggregation—which will be a key panel in the final dashboard.
 
-(please put a screenshot of one or more visualizations of this dataset you already made, for previous assignments, and link to them)
-
-You can put images into here by pasting them into issues.
-
-You can make images into links like this:
-
-```
-[![image](https://user-images.githubusercontent.com/68416/65240758-9ef6c980-daff-11e9-9ffa-e35fc62683d2.png)](https://vizhub.com/curran/eab039ad1765433cb51aad167d9deae4)
-```
-
-
-Also, you can study the [source](https://raw.githubusercontent.com/curran/dataviz-project-template-proposal/master/README.md) to figure out Markdown formatting. You can use the GitHub built-in editor to edit the document.
-
-## Open Questions
-
-(describe any fear, uncertainty, or doubt you’re having about the feasibility of implementing the sketched system. For example, “I’m not sure where to get the geographic shapes to build a map from this data” or “I don’t know how to resolve the codes to meaningful names” … Feel free to delete this section if you’re confident.)
-
-## Milestones
-
-(for each week, estimate what would be accomplised)
+Purpose: Compare the Average Glucose level between the Diabetic and Non-Diabetic groups.
