@@ -13,13 +13,17 @@ Source URL: https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database
 A. Core Questions to Answer
 
 Prediction Threshold: Where is the precise boundary (in terms of BMI and Glucose) that separates high-risk from low-risk patients?
+
 Risk Amplification: How does Age or Pregnancies amplify the risk when combined with high BMI and Glucose?
+
 Factor Comparison: Which attribute (e.g., Glucose vs. BloodPressure) shows the clearest difference between the Diabetic and Non-Diabetic groups?
 
 B. Tasks to Enable (User Goals)
 
 Comparison: Compare the average value of any metric (e.g., Insulin) between the two categorical groups (Diabetic vs. Non-Diabetic).
+
 Segmentation: Filter or select a specific cohort (e.g., patients with BMI > 35) and view their corresponding distributions across all other factors.
+
 Lookup: Instantly retrieve all raw biometric data for a single patient (point) by hovering over or clicking on a mark.
 
 ## Sketches
