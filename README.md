@@ -24,7 +24,7 @@ Lookup: Instantly retrieve all raw biometric data for a single patient (point) b
 
 ## Sketches
 
-![Final Visual Vision (Iterated Sketch 2)](https://github.com/skas901/dataviz-project-template-proposal/blob/master/sketch3.png)
+![Final Visual Vision (Iterated Sketch 2)](https://github.com/skas901/dataviz-project-template-proposal/blob/master/iterated.png)
 
 This sketch informs the most perceptually accurate visual encoding for the primary risk factors in the final dashboard's Small Multiples panels.
 
@@ -38,8 +38,7 @@ Color Intensity: Age (Sequential Light → Dark) (Medium Accuracy for Quantitati
 
 
 ## Prototypes
-
-![image](https://pasteboard.co/rPKInoSENW0w.png)
+![Prototype 1](https://github.com/skas901/dataviz-project-template-proposal/blob/master/sketch3.png)
 
 This working prototype demonstrates the use of a new technique—Arranging Tables by aggregation—which will be a key panel in the final dashboard.
 
