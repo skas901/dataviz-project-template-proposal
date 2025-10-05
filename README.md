@@ -47,3 +47,20 @@ Color Intensity: Age (Sequential Light → Dark) (Medium Accuracy for Quantitati
 This working prototype demonstrates the use of a new technique—Arranging Tables by aggregation—which will be a key panel in the final dashboard.
 
 Purpose: Compare the Average Glucose level between the Diabetic and Non-Diabetic groups.
+
+## Project Progress: Implementing the Multivariate Grid
+![Prototype 1](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Prototype.png)
+
+The major progress milestone achieved is the implementation of the core visualization structure: the Multivariate Small Multiples Grid. This component uses the Arranging Tables principle to display the relationship between all major quantitative attributes simultaneously.
+
+A. Technical Achievement: Small Multiples
+The prototype now generates a matrix of scatter plots, specifically a 5x5 grid using the most predictive quantitative features: Glucose, BMI, Age, Pregnancies, and BloodPressure.
+
+This required complex data preprocessing to transform the single patient record into an array of data points suitable for each subplot, a key step toward the final dashboard structure.
+
+B. Visual Encoding and Analysis
+Purpose: The grid allows the user to quickly scan across plots to identify which attribute pairs show the clearest separation between the diabetic and non-diabetic groups.
+
+Position (X/Y): Varied across all subplots, representing the unique pairing of attributes (e.g., Row 3, Column 2 shows Age vs. BMI).
+
+Color (Consistent): The Outcome (Risk) is mapped consistently to Color (e.g., Red for Diabetic, Blue for Non-Diabetic) in every single subplot. This consistency is critical for comparison.
