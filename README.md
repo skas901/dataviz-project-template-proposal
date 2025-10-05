@@ -49,7 +49,7 @@ This working prototype demonstrates the use of a new technique—Arranging Table
 Purpose: Compare the Average Glucose level between the Diabetic and Non-Diabetic groups.
 
 ## Project Progress: Implementing the Multivariate Grid
-![Prototype 1](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Prototype.png)
+![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Progress.png)
 
 The major progress milestone achieved is the implementation of the core visualization structure: the Multivariate Small Multiples Grid. This component uses the Arranging Tables principle to display the relationship between all major quantitative attributes simultaneously.
 
