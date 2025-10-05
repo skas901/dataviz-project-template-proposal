@@ -42,7 +42,7 @@ Color Intensity: Age (Sequential Light → Dark) (Medium Accuracy for Quantitati
 
 
 ## Prototypes
-![Prototype 1](https://github.com/skas901/dataviz-project-template-proposal/blob/master/sketch3.png)
+![Prototype 1](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Prototype.png)
 
 This working prototype demonstrates the use of a new technique—Arranging Tables by aggregation—which will be a key panel in the final dashboard.
 
