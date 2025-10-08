@@ -68,7 +68,7 @@ Color (Consistent): The Outcome (Risk) is mapped consistently to Color (e.g., Re
 ## Project Momentum: Dual View Dashboard Prototype
 ![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Momentum.png)
 
-This file contains the logic for both the advanced Scatter Plot (implementing Shape and Color Intensity) and the Aggregated Bar Chart, setting up the foundation for your final multi-panel dashboard.
+This file contains the logic for both the advanced Scatter Plot (implementing Shape and Color Intensity) and the Aggregated Bar Chart, setting up the foundation for the final multi-panel dashboard.
 
 Dual Visualization Logic: It contains all the necessary functions to render two distinct visualizations from the Pima dataset: a scatter plot and a bar chart.
 
