@@ -64,3 +64,16 @@ Purpose: The grid allows the user to quickly scan across plots to identify which
 Position (X/Y): Varied across all subplots, representing the unique pairing of attributes (e.g., Row 3, Column 2 shows Age vs. BMI).
 
 Color (Consistent): The Outcome (Risk) is mapped consistently to Color (e.g., Red for Diabetic, Blue for Non-Diabetic) in every single subplot. This consistency is critical for comparison.
+
+## Project Momentum: Dual View Dashboard Prototype
+![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Momentum.png)
+
+This file contains the logic for both the advanced Scatter Plot (implementing Shape and Color Intensity) and the Aggregated Bar Chart, setting up the foundation for your final multi-panel dashboard.
+
+Dual Visualization Logic: It contains all the necessary functions to render two distinct visualizations from the Pima dataset: a scatter plot and a bar chart.
+
+Scatter Plot (Left): Implements your Iterated Sketch 2 (BMI/Glucose by Position, Shape for Outcome, and Color Intensity for Age).
+
+Bar Chart (Right): Implements Data Aggregation, showing the Average Glucose level for the two categorical Outcome groups.
+
+D3 Clarity: It includes robust D3 scales, axes, and labels for both views.
