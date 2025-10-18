@@ -81,7 +81,7 @@ D3 Clarity: It includes robust D3 scales, axes, and labels for both views.
 ## Project Momentum: The Interactive Color Legend
 ![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Momentum_2.png)
 
-Vizhub link: https://vizhub.com/skas901/d20772ec4fe34fa0b38038d42120195d
+ Vizhub link: https://vizhub.com/skas901/d20772ec4fe34fa0b38038d42120195d
 
 The main focus was implementing the interactive color legend for the Age bins, adding significant exploratory power to the scatter plot.
 
