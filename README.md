@@ -77,3 +77,31 @@ Scatter Plot (Left): Implements your Iterated Sketch 2 (BMI/Glucose by Position,
 Bar Chart (Right): Implements Data Aggregation, showing the Average Glucose level for the two categorical Outcome groups.
 
 D3 Clarity: It includes robust D3 scales, axes, and labels for both views.
+
+## Project Momentum: The Interactive Color Legend
+![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Momentum_2.png)
+
+The main focus was implementing the interactive color legend for the Age bins, adding significant exploratory power to the scatter plot.
+
+1. State Management: I updated index.js to manage the component's state, specifically adding a selectedAgeBins Set. This Set tracks which age groups are currently visible. This is crucial for maintaining the filter state across renders.
+
+2. Legend Rendering: A dedicated renderLegend function was created in viz.js to:
+
+  * Generate a legend item (<g>) for each defined age bin (e.g., "30-39 years").
+  * Display a colored swatch using the d3.scaleThreshold()'s range.
+
+3. Click Handler (Interactivity): A click event listener was attached to each legend item:
+
+  * Toggling: Clicking an item adds or removes its corresponding age bin label from the selectedAgeBins Set via the setState function.
+  * Visual Feedback: The legend swatch is dimmed (opacity: 0.4) and the label is struck-through (text-decoration: line-through) when a bin is deselected.
+
+4. Data Filtering: In the renderScatterPlot function, the fill-opacity of each data point (mark) is now dynamically set:
+
+  * If a point's ageBinLabel is present in the selectedAgeBins Set, its opacity is 0.8 (visible).
+  * If it's not present (i.e., the legend item was clicked off), its opacity is set to 0 (hidden).
+
+This implementation allows users to instantly isolate specific age groups (e.g., only view patients aged 60+) to analyze their BMI and Glucose levels relative to the Diabetes Outcome, significantly enhancing the visualization's purpose of exploring risk segmentation.
+
+
+
+
