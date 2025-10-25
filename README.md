@@ -104,6 +104,16 @@ The main focus was implementing the interactive color legend for the Age bins, a
 
 This implementation allows users to instantly isolate specific age groups (e.g., only view patients aged 60+) to analyze their BMI and Glucose levels relative to the Diabetes Outcome, significantly enhancing the visualization's purpose of exploring risk segmentation.
 
+## Project Momentum: The Interactive Color Legend
+![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Momentum_3.png)
+
+ Vizhub link: https://vizhub.com/skas901/ea536413daf147bf881835f8da1e5c1d
+
+This week successfully integrated the highest-level interaction technique requested: Brushing and Linking. This feature creates a dynamic, exploratory connection between the Scatter Plot and the Bar Chart, allowing for on-the-fly aggregation of user-selected data subsets.
+
+**Key Interaction Upgrade: Brushing and Linking
+The core goal was to enable users to select a region of points (a "brush") on the Scatter Plot (BMI vs. Glucose) and have the Bar Chart (Avg. Glucose by Outcome) immediately update to reflect the average glucose levels only for those selected points.
+
 
 
 
