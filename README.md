@@ -112,6 +112,7 @@ This implementation allows users to instantly isolate specific age groups (e.g.,
 This week successfully integrated the highest-level interaction technique requested: Brushing and Linking. This feature creates a dynamic, exploratory connection between the Scatter Plot and the Bar Chart, allowing for on-the-fly aggregation of user-selected data subsets.
 
 **Key Interaction Upgrade: Brushing and Linking
+
 The core goal was to enable users to select a region of points (a "brush") on the Scatter Plot (BMI vs. Glucose) and have the Bar Chart (Avg. Glucose by Outcome) immediately update to reflect the average glucose levels only for those selected points.
 
 
