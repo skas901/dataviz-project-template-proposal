@@ -1,8 +1,6 @@
 # Data Visualization Project
 
-## Data
-
-Multivariate Diabetes Risk Dashboard
+## Multivariate Diabetes Risk Dashboard
 
 This project aims to create an interactive visualization for the Pima Indians Diabetes Dataset, allowing health analysts to rapidly explore and compare multiple risk factors (BMI, Glucose, Age, Pregnancies, etc.) to understand their collective contribution to a diabetes diagnosis. This design is based on Sketch 3: The Multivariate Comparison Dashboard.
 
@@ -26,113 +24,60 @@ Segmentation: Filter or select a specific cohort (e.g., patients with BMI > 35) 
 
 Lookup: Instantly retrieve all raw biometric data for a single patient (point) by hovering over or clicking on a mark.
 
-## Sketches
+## The Sketch: Defining Visual Channels
 
 ![Final Visual Vision (Iterated Sketch 2)](https://github.com/skas901/dataviz-project-template-proposal/blob/master/iterated.png)
 
-This sketch informs the most perceptually accurate visual encoding for the primary risk factors in the final dashboard's Small Multiples panels.
+The initial design focused on utilizing effective visual channels to encode multiple variables simultaneously (Multivariate Comparison Dashboard).
 
-Goal: Refine the plot using VAD principles.
-
-Position (X/Y): BMI and Glucose (High Accuracy).
-
-Shape: Outcome (Circle for Low Risk, Cross for High Risk) (High Accuracy for Categorical).
-
-Color Intensity: Age (Sequential Light → Dark) (Medium Accuracy for Quantitative/Ordered).
-
-
-## Prototypes
+## Implementing the Multivariate Grid
 ![Prototype 1](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Prototype.png)
 
-This working prototype demonstrates the use of a new technique—Arranging Tables by aggregation—which will be a key panel in the final dashboard.
+The first major technical milestone was building the Small Multiples Grid. This component uses the Arranging Tables principle to display the relationship between all major quantitative attributes simultaneously.
 
-Purpose: Compare the Average Glucose level between the Diabetic and Non-Diabetic groups.
+The grid successfully generated a 5x5 matrix of scatter plots using the most predictive quantitative features. This achievement required complex data preprocessing to transform the single patient record into an array of data points suitable for each subplot, setting the stage for deep comparative analysis.
 
-## Project Progress: Implementing the Multivariate Grid
+Insight: The visual consistency of mapping the Outcome to Color across every subplot was critical, allowing users to quickly scan and identify which attribute pairs showed the clearest separation between the diabetic and non-diabetic groups.
+
+## Adding Interactivity: The Color Legend
 ![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Progress.png)
 
-The major progress milestone achieved is the implementation of the core visualization structure: the Multivariate Small Multiples Grid. This component uses the Arranging Tables principle to display the relationship between all major quantitative attributes simultaneously.
+The implementation of the interactive color legend for Age bins added significant exploratory power. This required robust D3 state management (selectedAgeBins Set) to allow users to toggle specific age groups on and off.
 
-A. Technical Achievement: Small Multiples
-The prototype now generates a matrix of scatter plots, specifically a 5x5 grid using the most predictive quantitative features: Glucose, BMI, Age, Pregnancies, and BloodPressure.
+Result: Users could instantly isolate specific age groups (e.g., only patients aged 60+) to analyze their BMI and Glucose levels relative to the Diabetes Outcome, fulfilling the Segmentation goal.
 
-This required complex data preprocessing to transform the single patient record into an array of data points suitable for each subplot, a key step toward the final dashboard structure.
 
-B. Visual Encoding and Analysis
-Purpose: The grid allows the user to quickly scan across plots to identify which attribute pairs show the clearest separation between the diabetic and non-diabetic groups.
-
-Position (X/Y): Varied across all subplots, representing the unique pairing of attributes (e.g., Row 3, Column 2 shows Age vs. BMI).
-
-Color (Consistent): The Outcome (Risk) is mapped consistently to Color (e.g., Red for Diabetic, Blue for Non-Diabetic) in every single subplot. This consistency is critical for comparison.
-
-## Project Momentum: Dual View Dashboard Prototype
+## The Key Upgrade: Brushing and Linking
 ![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Momentum.png)
 
-This file contains the logic for both the advanced Scatter Plot (implementing Shape and Color Intensity) and the Aggregated Bar Chart, setting up the foundation for the final multi-panel dashboard.
+The integration of Brushing and Linking connected the dashboard's exploratory components. This feature allowed users to select a specific region (a "brush") on the main Scatter Plot (BMI vs. Glucose) and instantly update the summary statistics in a linked chart.
 
-Dual Visualization Logic: It contains all the necessary functions to render two distinct visualizations from the Pima dataset: a scatter plot and a bar chart.
 
-Scatter Plot (Left): Implements your Iterated Sketch 2 (BMI/Glucose by Position, Shape for Outcome, and Color Intensity for Age).
-
-Bar Chart (Right): Implements Data Aggregation, showing the Average Glucose level for the two categorical Outcome groups.
-
-D3 Clarity: It includes robust D3 scales, axes, and labels for both views.
-
-## Project Momentum: The Interactive Color Legend
+## Final Vision Realized: The 3-Panel Linked Dashboard
 ![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Momentum_2.png)
 
- Vizhub link: https://vizhub.com/skas901/d20772ec4fe34fa0b38038d42120195d
+The final project milestone was the full integration of all panels and interactivity features into a cohesive dashboard.
 
-The main focus was implementing the interactive color legend for the Age bins, adding significant exploratory power to the scatter plot.
+Final Dashboard Structure:
 
-1. State Management: I updated index.js to manage the component's state, specifically adding a selectedAgeBins Set. This Set tracks which age groups are currently visible. This is crucial for maintaining the filter state across renders.
+Panel 1: Multivariate Scatter Plot (BMI vs. Glucose, with Age and Outcome encoded)
 
-2. Legend Rendering: A dedicated renderLegend function was created in viz.js to:
+Panel 2: Faceted Bar Charts (Small Multiples)
+** Technique: The aggregated bar charts (Avg. Glucose by Outcome) are faceted by Age Bin.
+** Impact: This panel directly addresses the Risk Amplification question, showing how the average glucose difference between the Diabetic and Non-Diabetic groups becomes most pronounced in older age cohorts.
 
-  * Generate a legend item (<g>) for each defined age bin (e.g., "30-39 years").
-  * Display a colored swatch using the d3.scaleThreshold()'s range.
+Panel 3: Patient Detail Card
+** Interactivity: Updates upon clicking a single data point in the Scatter Plot (Lookup functionality).
 
-3. Click Handler (Interactivity): A click event listener was attached to each legend item:
+Key Takeaway: The seamless Brushing and Linking between Panel 1 (Scatter Plot) and Panel 2 (Faceted Bar Charts) allows analysts to select a high-risk region (e.g., high BMI/high Glucose) and immediately see the demographic breakdown of that specific cohort.
 
-  * Toggling: Clicking an item adds or removes its corresponding age bin label from the selectedAgeBins Set via the setState function.
-  * Visual Feedback: The legend swatch is dimmed (opacity: 0.4) and the label is struck-through (text-decoration: line-through) when a bin is deselected.
 
-4. Data Filtering: In the renderScatterPlot function, the fill-opacity of each data point (mark) is now dynamically set:
 
-  * If a point's ageBinLabel is present in the selectedAgeBins Set, its opacity is 0.8 (visible).
-  * If it's not present (i.e., the legend item was clicked off), its opacity is set to 0 (hidden).
-
-This implementation allows users to instantly isolate specific age groups (e.g., only view patients aged 60+) to analyze their BMI and Glucose levels relative to the Diabetes Outcome, significantly enhancing the visualization's purpose of exploring risk segmentation.
-
-## Project Momentum: The Interactive Color Legend
+## Conclusion and Live Project
 ![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Momentum_3.png)
 
- Vizhub link: https://vizhub.com/skas901/ea536413daf147bf881835f8da1e5c1d
+The Multivariate Diabetes Risk Dashboard is a successful implementation of a multi-layered interactive visualization. It utilizes principles of effective visual encoding and advanced D3 interactivity (Brushing, Linking, Small Multiples) to provide a powerful tool for exploring multivariate risk in the Pima Indians Diabetes dataset.
 
-This week successfully integrated the highest-level interaction technique requested: Brushing and Linking. This feature creates a dynamic, exploratory connection between the Scatter Plot and the Bar Chart, allowing for on-the-fly aggregation of user-selected data subsets.
+Explore the final interactive dashboard here:
 
-**Key Interaction Upgrade: Brushing and Linking
-
-The core goal was to enable users to select a region of points (a "brush") on the Scatter Plot (BMI vs. Glucose) and have the Bar Chart (Avg. Glucose by Outcome) immediately update to reflect the average glucose levels only for those selected points.
-
-## Project Momentum: Final Dashboard Implementation
-![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Momentum_4.png)
-
- Vizhub link: [https://vizhub.com/skas901/ea536413daf147bf881835f8da1e5c1d](https://vizhub.com/skas901/711f4be4177144b99ff76a15d866f684)
-
-** Final Vision Realized: The 3-Panel Linked Dashboard
-The project now renders the complete dashboard structure, demonstrating full interactivity and complex channel usage across three panels
-
-** Implementation of Faceting 
-The major technical milestone was replacing the static bar chart with the Faceted Bar Charts (Small Multiples).Technique: The data is processed to create separate aggregations (average Glucose vs. Outcome) for each defined Age Bin (e.g., < 20, 30-39, 40-49, etc.).
-
-Result: This allows the user to see, for instance, that while Average Glucose is high for the Diabetic group overall, the difference is most pronounced in the older age bins, demonstrating the true risk amplification of Age.
-
-** Interactivity and Stability: Successfully integrated the final set of interactivity features required for a powerful analysis tool:
-
-Brushing and Linking (Panel 1 to Panel 2): The Scatter Plot now includes a working D3 Brush. When the user selects a region (e.g., only points with BMI > 40), the data displayed in the Faceted Bar Charts (Panel 2) immediately updates, showing the aggregated averages only for the brushed cohort.
-
-Lookup Interactivity (Panel 1 to Panel 3): Clicking a single point in the Scatter Plot updates the central state, which renders the detailed information in the Patient Detail Card.
-
-
-
+https://vizhub.com/skas901/711f4be4177144b99ff76a15d866f684
