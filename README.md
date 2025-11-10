@@ -26,12 +26,12 @@ Lookup: Instantly retrieve all raw biometric data for a single patient (point) b
 
 ## The Sketch: Defining Visual Channels
 
-![Final Visual Vision (Iterated Sketch 2)](https://github.com/skas901/dataviz-project-template-proposal/blob/master/iterated.png)
+![Final Visual Vision](https://github.com/skas901/dataviz-project-template-proposal/blob/master/sketch3.png)
 
 The initial design focused on utilizing effective visual channels to encode multiple variables simultaneously (Multivariate Comparison Dashboard).
 
 ## Implementing the Multivariate Grid
-![Prototype 1](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Prototype.png)
+![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Progress.png)
 
 The first major technical milestone was building the Small Multiples Grid. This component uses the Arranging Tables principle to display the relationship between all major quantitative attributes simultaneously.
 
@@ -40,7 +40,7 @@ The grid successfully generated a 5x5 matrix of scatter plots using the most pre
 Insight: The visual consistency of mapping the Outcome to Color across every subplot was critical, allowing users to quickly scan and identify which attribute pairs showed the clearest separation between the diabetic and non-diabetic groups.
 
 ## Adding Interactivity: The Color Legend
-![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Progress.png)
+![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Momentum_2.png)
 
 The implementation of the interactive color legend for Age bins added significant exploratory power. This required robust D3 state management (selectedAgeBins Set) to allow users to toggle specific age groups on and off.
 
@@ -48,13 +48,13 @@ Result: Users could instantly isolate specific age groups (e.g., only patients a
 
 
 ## The Key Upgrade: Brushing and Linking
-![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Momentum.png)
+![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Momentum_3.png)
 
 The integration of Brushing and Linking connected the dashboard's exploratory components. This feature allowed users to select a specific region (a "brush") on the main Scatter Plot (BMI vs. Glucose) and instantly update the summary statistics in a linked chart.
 
 
 ## Final Vision Realized: The 3-Panel Linked Dashboard
-![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Momentum_2.png)
+![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Momentum_4.png)
 
 The final project milestone was the full integration of all panels and interactivity features into a cohesive dashboard.
 
@@ -71,10 +71,7 @@ Panel 3: Patient Detail Card
 
 Key Takeaway: The seamless Brushing and Linking between Panel 1 (Scatter Plot) and Panel 2 (Faceted Bar Charts) allows analysts to select a high-risk region (e.g., high BMI/high Glucose) and immediately see the demographic breakdown of that specific cohort.
 
-
-
 ## Conclusion and Live Project
-![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Momentum_3.png)
 
 The Multivariate Diabetes Risk Dashboard is a successful implementation of a multi-layered interactive visualization. It utilizes principles of effective visual encoding and advanced D3 interactivity (Brushing, Linking, Small Multiples) to provide a powerful tool for exploring multivariate risk in the Pima Indians Diabetes dataset.
 
