@@ -63,10 +63,13 @@ Final Dashboard Structure:
 Panel 1: Multivariate Scatter Plot (BMI vs. Glucose, with Age and Outcome encoded)
 
 Panel 2: Faceted Bar Charts (Small Multiples)
+
 ** Technique: The aggregated bar charts (Avg. Glucose by Outcome) are faceted by Age Bin.
+
 ** Impact: This panel directly addresses the Risk Amplification question, showing how the average glucose difference between the Diabetic and Non-Diabetic groups becomes most pronounced in older age cohorts.
 
 Panel 3: Patient Detail Card
+
 ** Interactivity: Updates upon clicking a single data point in the Scatter Plot (Lookup functionality).
 
 Key Takeaway: The seamless Brushing and Linking between Panel 1 (Scatter Plot) and Panel 2 (Faceted Bar Charts) allows analysts to select a high-risk region (e.g., high BMI/high Glucose) and immediately see the demographic breakdown of that specific cohort.
