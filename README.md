@@ -120,8 +120,19 @@ The core goal was to enable users to select a region of points (a "brush") on th
 
  Vizhub link: [https://vizhub.com/skas901/ea536413daf147bf881835f8da1e5c1d](https://vizhub.com/skas901/711f4be4177144b99ff76a15d866f684)
 
-This week successfully integrated the highest-level interaction technique requested: Brushing and Linking. This feature creates a dynamic, exploratory connection between the Scatter Plot 
+** Final Vision Realized: The 3-Panel Linked Dashboard
+The project now renders the complete dashboard structure, demonstrating full interactivity and complex channel usage across three panels
 
+** Implementation of Faceting 
+The major technical milestone was replacing the static bar chart with the Faceted Bar Charts (Small Multiples).Technique: The data is processed to create separate aggregations (average Glucose vs. Outcome) for each defined Age Bin (e.g., < 20, 30-39, 40-49, etc.).
+
+Result: This allows the user to see, for instance, that while Average Glucose is high for the Diabetic group overall, the difference is most pronounced in the older age bins, demonstrating the true risk amplification of Age.
+
+** Interactivity and Stability: Successfully integrated the final set of interactivity features required for a powerful analysis tool:
+
+Brushing and Linking (Panel 1 to Panel 2): The Scatter Plot now includes a working D3 Brush. When the user selects a region (e.g., only points with BMI > 40), the data displayed in the Faceted Bar Charts (Panel 2) immediately updates, showing the aggregated averages only for the brushed cohort.
+
+Lookup Interactivity (Panel 1 to Panel 3): Clicking a single point in the Scatter Plot updates the central state, which renders the detailed information in the Patient Detail Card.
 
 
 
