@@ -115,6 +115,13 @@ This week successfully integrated the highest-level interaction technique reques
 
 The core goal was to enable users to select a region of points (a "brush") on the Scatter Plot (BMI vs. Glucose) and have the Bar Chart (Avg. Glucose by Outcome) immediately update to reflect the average glucose levels only for those selected points.
 
+## Project Momentum: The Interactive Color Legend
+![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Momentum_4.png)
+
+ Vizhub link: [https://vizhub.com/skas901/ea536413daf147bf881835f8da1e5c1d](https://vizhub.com/skas901/711f4be4177144b99ff76a15d866f684)
+
+This week successfully integrated the highest-level interaction technique requested: Brushing and Linking. This feature creates a dynamic, exploratory connection between the Scatter Plot 
+
 
 
 
