@@ -75,7 +75,7 @@ Panel 3: Patient Detail Card
 Key Takeaway: The seamless Brushing and Linking between Panel 1 (Scatter Plot) and Panel 2 (Faceted Bar Charts) allows analysts to select a high-risk region (e.g., high BMI/high Glucose) and immediately see the demographic breakdown of that specific cohort.
 
 ## Finishing Touches
-![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Final dashboard.png)
+![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Final_dashboard.png)
 
 ** Visual Clarity and Completeness (Enhancements)
 The code now includes key visual elements required for a professional data visualization report:
