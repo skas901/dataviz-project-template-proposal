@@ -74,10 +74,26 @@ Panel 3: Patient Detail Card
 
 Key Takeaway: The seamless Brushing and Linking between Panel 1 (Scatter Plot) and Panel 2 (Faceted Bar Charts) allows analysts to select a high-risk region (e.g., high BMI/high Glucose) and immediately see the demographic breakdown of that specific cohort.
 
+## Finishing Touches
+![](https://github.com/skas901/dataviz-project-template-proposal/blob/master/Momentum_4.png)
+
+** Visual Clarity and Completeness (Enhancements)
+The code now includes key visual elements required for a professional data visualization report:
+
+Legends Added: The renderLegends function was fully implemented to display the Age Color Legend (sequential scale) and the Outcome Shape Legend (categorical scale), explaining the multivariate encoding of the scatter plot.
+
+Axis Units Added: All primary axes were updated with domain-specific units for clarity:
+
+BMI: [kg/m²]
+
+Glucose: [mg/dL]
+
+Layout Adjusted: index.js was slightly reorganized to ensure the main plots and the new Legend Area render side-by-side, maintaining visual completeness without requiring scrolling.
+
 ## Conclusion and Live Project
 
 The Multivariate Diabetes Risk Dashboard is a successful implementation of a multi-layered interactive visualization. It utilizes principles of effective visual encoding and advanced D3 interactivity (Brushing, Linking, Small Multiples) to provide a powerful tool for exploring multivariate risk in the Pima Indians Diabetes dataset.
 
 Explore the final interactive dashboard here:
 
-https://vizhub.com/skas901/711f4be4177144b99ff76a15d866f684
+[https://vizhub.com/skas901/711f4be4177144b99ff76a15d866f684](https://vizhub.com/skas901/142b8a74f2544ebb8d1d3c3651833fca)
